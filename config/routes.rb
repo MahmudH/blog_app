@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  get '/index', to: 'pages#index'
-  #root 'pages#index'
+  root 'pages#index'
+
+  resources :articles do
+    resources :comments
+  end
+  #get '/index', to: 'pages#index'
+  #get '/articles', to: 'articles#index'
 
 end
