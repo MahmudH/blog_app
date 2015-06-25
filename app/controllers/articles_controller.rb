@@ -35,7 +35,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def delete
+  def destory
     @article = Article.find(params[:id])
     @article.destroy
 
